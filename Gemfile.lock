@@ -1,0 +1,54 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    chunky_png (1.3.10)
+    diff-lcs (1.3)
+    image_size (2.0.0)
+    mustermann (1.0.2)
+    pg (1.0.0)
+    puma (3.11.4)
+    rack (2.0.5)
+    rack-protection (2.0.1)
+      rack
+    rack-test (1.0.0)
+      rack (>= 1.0, < 3)
+    rake (12.3.1)
+    rmagick (2.16.0)
+    rspec (3.7.0)
+      rspec-core (~> 3.7.0)
+      rspec-expectations (~> 3.7.0)
+      rspec-mocks (~> 3.7.0)
+    rspec-core (3.7.1)
+      rspec-support (~> 3.7.0)
+    rspec-expectations (3.7.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.7.0)
+    rspec-mocks (3.7.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.7.0)
+    rspec-support (3.7.1)
+    sequel (5.8.0)
+    sinatra (2.0.1)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.1)
+      tilt (~> 2.0)
+    tilt (2.0.8)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  chunky_png
+  image_size
+  pg
+  puma
+  rack-test
+  rake
+  rmagick
+  rspec
+  sequel
+  sinatra
+
+BUNDLED WITH
+   1.16.1
