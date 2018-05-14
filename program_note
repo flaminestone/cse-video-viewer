@@ -1,7 +1,6 @@
 docker build . -t cvv
-docker run -itd -p 9292:9292 cvv `puma -p 9292`
-docker run -itd -p 9292:80 cvv
+docker run -itd -p 9292:9292 cvv
 
 
 
-docker run -itd -p 8080:80 -v /home/flamine/plugin:/var/www/onlyoffice/documentserver/sdkjs-plugins/plugin onlyoffice/4testing-documentserver-ie:5.1.99.655a.rb
+docker run -itd -p 8080:80 -v /home/flamine/plugin:/var/www/onlyoffice/documentserver/sdkjs-plugins/plugin onlyoffice/4testing-documentserver-ie:5.1.99.655

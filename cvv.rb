@@ -22,4 +22,8 @@ class Api < Sinatra::Base
     end
     { data: data }.to_json
   end
+
+  get '/' do
+    'hello'
+  end
 end

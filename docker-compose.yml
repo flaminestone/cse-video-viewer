@@ -1,0 +1,11 @@
+version: '2'
+services:
+  vv-server:
+    build: .
+    tty: true
+  nginx-server:
+    image: nginx
+    volumes:
+     - ./proxy/cvv-proxy:/etc/nginx/conf.d/cvv-proxy
+    ports:
+     - "80:80"
