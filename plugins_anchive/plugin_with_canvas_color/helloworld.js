@@ -73,7 +73,6 @@
                         index++;
                     }
                 }
-
                 canvas = null;
                 rr = new Date().getTime() - rr;
                 console.log(":time " + rr);

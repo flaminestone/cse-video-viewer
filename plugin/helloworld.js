@@ -1,11 +1,6 @@
 (function (window, undefined) {
 
-    // for timing start
-    window.frameTime = -1;
     window.frameIndex = -1;
-    window.frameDuration = 1;
-
-    //for timing end
     Asc.scope.st = 0;
 
     window.Asc.plugin.init = function () {
@@ -22,34 +17,9 @@
         xhr.send("resolution=30x30");
     };
 
-    function wait_and_run() {
-        var time = new Date().getTime();
-        if (window.frameTime === -1) {
-            window.frameTime = time;
-        } else {
-            var delay = time - window.frameTime;
-            if (delay < window.frameDuration) {
-                setTimeout(function () {
-                    wait_and_run();
-                }, window.frameDuration - delay);
-            }
-            else {
-                window.frameTime = time;
-            }
-        }
-        window.frameIndex++;
-        console.log( window.frameIndex);
-        if (window.frameIndex >= window.data.length) {
-            window.Asc.plugin.executeCommand("close", "");
-            return;
-        }
-        Asc.scope.st = window.data[window.frameIndex]
-    }
-
     window.Asc.plugin.onCommandCallback = function () {
-        // window.frameIndex++;
-        // Asc.scope.st = window.data[window.frameIndex];
-        wait_and_run();
+        window.frameIndex++;
+        Asc.scope.st = window.data[window.frameIndex];
         this.callCommand(function () {
             var image = new Image();
             image.src = Asc.scope.st;
