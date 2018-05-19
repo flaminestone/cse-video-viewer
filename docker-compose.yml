@@ -6,6 +6,10 @@ services:
   nginx-server:
     image: nginx
     volumes:
-     - ./proxy/cvv-proxy:/etc/nginx/conf.d/cvv-proxy
+     - ./proxy/default.conf:/etc/nginx/conf.d/default.conf
     ports:
      - "80:80"
+  docservice:
+    image: onlyoffice/4testing-documentserver-ie:5.1.99.673
+    volumes:
+    - ./plugin:/var/www/onlyoffice/documentserver/sdkjs-plugins/plugin
