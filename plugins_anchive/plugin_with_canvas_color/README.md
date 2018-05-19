@@ -1,0 +1,1 @@
+This plugin has creating for demonstrating ability to color cells by canvas pixels.
